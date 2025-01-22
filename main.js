@@ -12,6 +12,14 @@ document.body.appendChild(renderer.domElement);
 
 const G = 9.80665;
 const DEGREES_TO_RADIANS = 0.0174533;
+
+
+function cycle(a, b, p){
+    
+}
+function lerp(a, b, t){
+
+}
 function gcs_to_ecef(coordinate){
     let x = coordinate[0] * rad_conv;
     let y = coordinate[1] * rad_conv;
