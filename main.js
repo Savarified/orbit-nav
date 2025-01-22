@@ -10,10 +10,18 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(w, h);
 document.body.appendChild(renderer.domElement);
 
+const G = 9.80665;
 const DEGREES_TO_RADIANS = 0.0174533;
 function gcs_to_ecef(coordinate){
     let x = coordinate[0] * rad_conv;
     let y = coordinate[1] * rad_conv;
+}
+
+function distance3D(t1, t2){
+    [x1,y1,z1] = [t1.x,t1.y,t1.z];
+    [x2,y2,z2] = [t2.x,t2.y,t2.z]; 
+    //PQ = d = √ [(x2 – x1)2 + (y2 – y1)2 + (z2 – z1)2]
+    return Math.sqrt( ((x2 - x1)**2) + ((y2 - y1)**2) + ((z2 - z1)**2) );
 }
 
 let system_total = [];
@@ -70,9 +78,23 @@ function applyVelocities(){
     ship123Obj.position.z = ship123.y;
 }
 
+function applyGravity(){
+    system_total.forEach((body1) => {
+        for(let i = 0; i < system_total.length; i++){
+            if(system_total.indexOf(body1)==i){
+                continue;
+            }
+            let body2 = system_total[i];
+            let force = (G * body1.mass * body2.mass) / distance3D(body1, body2);
+            //Newton's Universal Gravitation ^
+            //F = (G * m1 * m2) / d^2
+    }
+}
+
 function frame(){
     requestAnimationFrame(frame);
     applyVelocities();
+    //Reference Kepler's Third Law here
     renderer.render(scene, camera);
 }
 
