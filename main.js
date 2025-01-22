@@ -15,10 +15,16 @@ const DEGREES_TO_RADIANS = 0.0174533;
 
 
 function cycle(a, b, p){
-    
+    while (p > b){
+        p -= b-a;
+    }
+    while (p < a){
+        p += b-a;
+    }
+    return p;
 }
 function lerp(a, b, t){
-
+    return a + ((b-a) * t);
 }
 function gcs_to_ecef(coordinate){
     let x = coordinate[0] * rad_conv;
