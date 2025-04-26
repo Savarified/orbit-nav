@@ -1,0 +1,10 @@
+Initial Processes:
+1. Convert launch center geodetic coordinates to GCRS coordinates given the exact launch time.
+
+Runtime:
+1. GCRS cartesian coordinates are updated for each body every simulated hour.
+2. Update forces to the shuttle per frame
+3. Render all non-occluded celestial bodies
+4. Render shuttle at GCRS coordinates
+5. Analyze flight path, making adjustments to the shuttle rotation as necessary.
+6. Subtract main engine fuel + RCS fuel

@@ -1,0 +1,28 @@
+Gravitational Constant: 6.6743 x 10^-11 m^3 / kg^-1 s^-2
+NASA Houston TX Space Center
+[
+    Latitude: 29.551811
+    Longitude: -95.098228
+]
+
+Earth Metrics
+[
+    mass: 5.9722 x 10^24 kg
+    radius: 6.378137 x 10^6 m
+]
+
+Mars Metrics
+[
+    mass: 6.4169 x 10^23 kg
+    radius: 3.389500 x 10^6 m
+]
+
+Apollo 17 Saturn V Rocket[
+    launch mass: 48,609 kg + 2.7 x 10^6 kg
+    landing mass: 5,500 kg
+    height: 110.6 m
+    radius: 1.95 m
+    fuel capacity: 777,000 l
+    fuel: Aerozine 50 (fuel) + Nitrogen (oxidizer) mixed at 1.6:1
+    surface area: ~1800 m^2
+]
