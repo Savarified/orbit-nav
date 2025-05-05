@@ -320,7 +320,7 @@ while run:
                 command = input()
                 args = command.split(' ')
                 if('kill' in command): quit_app('Processes terminated manually')
-                if('fuel loss' in command): print('Expected fuel loss over 132,016.284 m: \n435,002 kg Aerozine 50 : Nitrogen 1.6:1, 0.2245% capacity left for return mission LEM.')
+                if('fuel loss' in command): print('Expected fuel loss over 132,016.284 m: \n435,002 kg Aerozine 50 : Nitrogen 1.6:1, 0.2245% capacity left for return mission LEM.') # TEMP
                 if('thrust' in command):
                     m, mf, v = float(args[1]), float(args[2]), float(args[3])
                     print(f'Thrust at {m} kg, {mf} kg/s, {v} m/s: {calculate_thrust(m, mf, v)}')
